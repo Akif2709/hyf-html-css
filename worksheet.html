@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>deneme </title>
+<style>
+
+div.grow {
+    display: flex;
+    width:800px;
+    border:2px solid;    
+   
+}
+
+div.shrink {
+    display: flex;
+    width:500px;
+    border:2px solid;    
+   
+}
+
+.box {
+    width:250px;
+    background-color:rgb(164, 226, 248);
+    border:2px solid;
+  
+}
+
+
+p {
+    font-size:25px;
+}
+strong {
+    color:red;
+}
+</style>
+</head>
+<body>
+
+
+<h2>Flex-Grow</h2>
+<div class="shrink">
+    <p class="box">Box1</p>
+    <p class="box">Box2</p>
+    <p class="box">Box3</p>
+</div>
+
+
+<p>1-IT defines the ability for a flex item to grow if necessary.</p>
+<p>2-Default value of flex-shrink is "0"</p>
+<p>3-Can not take negative values</p>
+<p>4-Flex: <strong> 0</strong> 1 120px;</p>
+
+<br> <br> <br>
+
+<h2>Flex-Shrink</h2>
+<div class="shrink">
+        <p class="box">Box1</p>
+        <p class="box">Box2</p>
+        <p class="box">Box3</p>
+</div>
+
+
+<p>1-It specifies the "flex shrink factor", which determines how much the flex item will shrink relative to the rest of the flex items in
+     the flex container when there isn't enough space on the row. </p>
+<p>2-Default value of flex-shrink is "1"</p>
+<p>3-Can not take negative values</p>
+<p>4-Flex: 0 <strong>1 </strong> 120px;</p>
+
+
+
+</body>
+</html>
