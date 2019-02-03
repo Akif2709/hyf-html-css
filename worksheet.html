@@ -7,15 +7,13 @@
 
 div.grow {
     display: flex;
-    width:800px;
-    border:2px solid;    
+      
    
 }
 
 div.shrink {
     display: flex;
-    width:500px;
-    border:2px solid;    
+   
    
 }
 
@@ -26,12 +24,12 @@ div.shrink {
   
 }
 
-div.grow:nth-child(1) {
-    flex-grow:
+.boxgrow {
+    flex-grow:2;
 }
 
-div.shrink:nth-child(1) {
-    flex-shrink:
+.boxshrink {
+    flex-shrink:2;
 }
 
 p {
@@ -46,8 +44,8 @@ strong {
 
 
 <h2>Flex-Grow</h2>
-<div class="shrink">
-    <p class="box">Box1</p>
+<div class="grow">
+    <p class="box boxgrow">Box1</p>
     <p class="box">Box2</p>
     <p class="box">Box3</p>
 </div>
@@ -62,7 +60,7 @@ strong {
 
 <h2>Flex-Shrink</h2>
 <div class="shrink">
-        <p class="box">Box1</p>
+        <p class="box boxshrink">Box1</p>
         <p class="box">Box2</p>
         <p class="box">Box3</p>
 </div>
