@@ -1,0 +1,287 @@
+ *  {
+margin:0px;
+padding:0px;
+text-align:center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+box-sizing: border-box;
+color: rgb(14, 24, 66);
+}
+
+
+
+html {background-image:url("http://papers.co/wallpaper/papers.co-vv85-sky-dark-star-night-nature-pattern-background-blue-25-wallpaper.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+
+}
+body {
+    margin:50px;
+    
+}
+
+h1 {    
+    background-color:rgb(218, 242, 250);
+    color:rgb(11, 21, 66);
+    margin:50px 0px;
+    border-radius: 50%;
+    font-family:'Dancing Script', cursive;
+    font-size:3rem;
+}
+
+
+h2 {
+    font-size:2.2em;
+    margin:100px 20px 30px 20px;
+    padding:10px;
+    color:rgb(218, 242, 250);
+    font-family: monospace;
+    display:flex;
+}
+
+h2:before, h2:after {
+    color:white;
+    content:'';
+    flex:1;
+    border-bottom:groove 2px;
+    margin:auto 1.25em;
+  }
+
+h3 {
+    font-size: 1.6em;
+    padding:10% 5% 3% 5%;
+    font-family:'Satisfy', cursive;
+}
+
+img {
+    width:calc(12vw + 30px);
+    position: relative;
+    margin: 5% 0 1% 0;
+    background-color: white;
+    justify-items: center;
+    border-radius: 5%;
+    box-shadow: -4px -3px 9px #1543da;
+    
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    font-size:1.2em;
+    font-family: 'Rokkitt', serif;
+    text-align:justify;
+    text-indent:25px;
+    margin:20px;   
+    font-weight: 500;
+      
+}
+
+.grid-item {
+    margin:10px;    
+    border:3px solid;
+    margin:15px;
+    display: block;
+    border-radius: 5%;
+    background-color: rgb(218, 242, 250);
+    animation:slide-left 1.5s cubic-bezier(.25,.46,.45,.94) both;
+}  
+
+@keyframes slide-left {
+    0% {
+      transform: translateX(500px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+
+#grid-floats li:nth-child(1) h3,
+#grid-flex li:nth-child(1) h3 {
+    font-size: 1.8em;  
+        
+}
+
+/* Floats */
+
+#grid-floats .grid-item {
+    width: calc(25% - 30px);
+    float:left;
+   
+}
+
+ul#grid-floats {
+    overflow:hidden;
+  }
+
+#grid-floats li:nth-child(1)  {
+    width: calc(50% - 30px);
+}
+
+#grid-floats li:nth-child(1) img  {
+    width:calc(15vw + 100px);
+}
+
+#grid-floats li:nth-child(4n) {
+    clear:left;
+}
+
+/* --------------Flexbox---------------- */
+
+#grid-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid-flex .grid-item {
+    width: calc(25% - 30px);
+        
+}
+
+#grid-flex li:nth-child(1) {
+    width:calc(50% - 30px);
+   
+}
+
+#grid-flex li:nth-child(1) img  {
+    width:calc(15vw + 100px);
+}
+
+
+
+
+
+/* -------------for phones ---------------*/
+
+@media (max-width:480px){
+
+#grid-floats li.grid-item {
+    width:calc(50% - 10px) ;
+    
+}
+
+#grid-floats li.grid-item:nth-child(1)  {
+    width: calc(100% - 10px) ;
+    
+}
+
+
+ul#grid-floats li:nth-child(2n) {
+    clear:left;
+}
+
+
+/* Second Part */
+#grid-flex .grid-item {
+    width: calc(50% - 10px);
+        
+}
+
+#grid-flex li:nth-child(1) {
+    width:calc(100% - 10px);
+}
+
+.grid-item {margin:5px;}
+
+section .grid-item h3 {font-size:1.1em}
+
+h2 {font-size: 1.4em;}
+h3 {font-size: 1em;}
+
+p {
+    margin:10px;
+    font-size: 0.7em;
+}
+
+#grid-floats li:nth-child(1) h3,
+#grid-flex li:nth-child(1) h3 {
+    font-size: 1.2em;  
+        
+}
+
+body {margin:5px;}
+
+}
+
+
+
+/* -----------------for tablets------------------ */
+
+@media (min-width:481px) and (max-width:1024px) { 
+
+#grid-floats li.grid-item  {
+    width: calc(100% / 3 - 10px);
+    
+}
+
+#grid-floats li.grid-item:nth-child(-n+2)  {
+    width: calc(50% - 10px);
+}
+
+ul#grid-floats li:nth-child(3n) {
+    clear:left;
+}
+ul#grid-floats li:nth-child(4n):not(:nth-child(12)) {
+    clear:none;
+}
+
+ul#grid-floats li:nth-child(2) img  {
+    width:calc(15vw + 100px);
+}
+
+ /* second part */
+
+#grid-flex .grid-item {
+    width: calc(100% / 3 - 10px);
+        
+}
+
+#grid-flex li:nth-child(-n+2) {
+    width:calc(50% - 10px);
+}
+
+ul#grid-flex li:nth-child(2) img  {
+    width:calc(15vw + 100px);
+}
+
+
+p {font-size: 1em;}
+
+ h3 {font-size:1.2em}
+
+.grid-item {margin:5px;}
+
+body {margin:10px;}
+
+ul#grid-floats li:nth-child(2) h3,
+ul#grid-flex li:nth-child(2) h3 {
+    animation:5s 3s infinite pulse;
+    
+}
+
+#grid-floats li:nth-child(1) h3,
+#grid-flex li:nth-child(1) h3 {
+    font-size: 1.4em;  
+        
+}
+
+
+}
+
+/* ----------General Property-------- */
+
+#grid-floats li:nth-child(1) h3,
+#grid-flex li:nth-child(1) h3 {
+    animation:5s 3s infinite pulse;
+        
+}
+
+@keyframes pulse {
+from {
+    transform: scale3d(1, 1, 1);
+}
+
+50% {
+    transform: scale3d(1.20, 1.20, 1.20);
+}
+}
