@@ -1,0 +1,693 @@
+html {
+    box-sizing:border-box;
+    font-size:16px;
+    font-size-adjust: 100%;
+    font-family:'Oranienbaum', serif; 
+    /* Original font family is 'Bodoni Egyptian Pro Medium' but it is paid. */
+    line-height: 1.5;
+    
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+    list-style-type:none;
+}
+
+img {max-width:100%; vertical-align: middle;}
+
+body{
+    position: relative;
+    margin:0;
+    transition: margin-right .5s;
+    background-image:url("pictures/Capture.jpg");
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size:85px;
+    background-attachment: local;
+  
+  }
+
+
+
+.container {
+    width:1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+a {
+    text-decoration:none;
+    color:black;
+    display:block; 
+     
+}
+
+main img {width:100%;} 
+
+/* -------------HEADER (NAVBAR)----------------- */
+header {
+    width: 100%;
+    font-family: 'Montserrat', serif;
+    display:flex;
+    justify-content: space-between;
+    width:1170px;
+    padding-right: -15px;
+    padding-left: -15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navimg img {max-width:200px;}
+
+.navimg {margin:16px 0 20px 2%;}
+
+.navcontainer ul {
+    display: table;
+    text-decoration: none;
+    
+}
+
+.navcontainer > ul > li {
+    font-size: 0.82em;
+    display:inline-block;
+    text-transform: uppercase;
+    letter-spacing:1.1px;  
+      
+}   
+
+.navcontainer > ul > li > a, .blocklist > a {
+    padding:40px 10px; 
+    display:block;
+}
+
+.navcontainer a:hover {text-decoration: underline;}
+
+/* HOVER DROPDOWN */
+
+ul.dropdown {
+    top:97px;
+    position: absolute;
+    min-width: 200px;
+    background-color:rgba(53,115,60,1);
+    z-index: 22222;
+    display:none;
+    padding:15px 5px
+    
+    
+}
+
+.dropdown a {
+    color:white;
+    padding:7px 15px;
+    text-transform: capitalize;
+    font-family:'Montserrat', sans-serif;
+    font-size:16px;
+    font-weight: 350;
+    letter-spacing: 0.8px;
+}
+
+.blocklist > a {display:block;}
+
+.blocklist {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+     }
+
+.blocklist:hover .dropdown{
+    display:block;
+} 
+
+
+/* HOVER DROPDOWN END */
+
+
+.language-checkbox {
+    display:inline-block;
+    position: absolute;
+    padding:5px;
+    margin:35px 0 35px 0%;
+    right:7%;    
+}
+
+input[type=checkbox] {
+    display:none;
+    }
+
+.languagelabel:before {
+    font-size:12px;
+    padding-right: 10px;
+    content:"\25bc";
+}
+
+ul.languagelist {display: none;}
+
+input#language-checkbox:checked ~ .languagelist {
+    display:block;
+    position: absolute;
+    z-index: 99999;
+   
+}
+ 
+/* SIDEBARMENU START */
+.hamburgermenu {
+    display: none;
+    width:55px;
+    right: 15px;
+    top: 30px;
+    position: absolute;
+    padding: 8px;
+    transition:all 2ms ease-in;
+    z-index: 500;
+}
+.bar {
+    width:100%;
+    background-color: #32804B;    
+    height:4px;
+    border-radius: 2px;   
+    margin-bottom:7px;
+}
+
+.sidebarlist, .sidebarlang {padding:10px; margin-bottom:10px;}
+
+.sidebarlang a {padding:0 5px;}
+
+.sidebarlist a {width:100%; padding:3px;}
+
+.sidebar a {
+    text-decoration: none;
+    color:#32804B;
+    display:block;
+}
+
+.sidebar a:hover{ text-decoration: underline;}
+
+.sidebarlang {display:flex;}
+
+
+.sidebar {
+    position: fixed;
+    height: auto;
+    width: 256px;
+    padding:10px;
+    top: 80px;
+    right:-256px;
+    background-color: white;
+    z-index: 22222222222;
+    
+}
+
+input#sidebarinput {display:none;}
+
+input#sidebarinput:checked ~  .sidebar{
+    transform:translate3d(-250px, 0, 0);
+    /* animation:slide-left 1.5s cubic-bezier(.25,.46,.45,.94) both !important; */
+    
+}
+
+
+/* SIDEBARMENU END */
+
+/* ----------HEADER END-------------- */
+
+    
+
+.maailman {
+    display:block;
+    width: 750px;    
+    max-width: 100%;
+    left:0;
+    right:0;
+    margin:-36px auto 0 auto;   
+    position: absolute;
+    text-align:center;  
+    z-index: 3; 
+}
+
+
+.mainentrance {
+    font-weight: 400px;    
+    background-color:white;
+    padding:1px;
+    height: auto;
+    text-align: center;
+   
+}
+  
+.mainentrance h1 {
+    color:#35733c;
+    font-size: 44px;  
+    margin-top:20px;
+    font-weight: 600;
+  
+}
+
+.mainentrance h2 {
+    font-size: 33px;
+    opacity: 0.7;
+    font-weight: 200px;
+    margin-bottom:20px;
+    
+}
+
+.fisherimg {
+    width: 100%;
+    float:left;
+    position: relative;
+    z-index:2;
+  
+}
+.circleorangeinfo {
+    width:120px;
+    height:120px;
+    background-color:rgb(233, 78, 15);
+    border-radius: 50%;
+    text-align:center;
+    position: absolute;
+    font-size:35px;
+    font-family: 'Satisfy', cursive;
+    z-index:10;
+    top:40%;
+    left:88%;
+    vertical-align: middle;
+    line-height: 120px;
+    font-weight:200;
+    
+}
+
+.circleorangeinfo a, .circleorangeinfo {
+    color:white;
+}
+
+/*---- COLUMN-3 (GREEN COLUMN)---- */
+
+.museokortti {
+    width:100%;
+    background-color: rgb(53, 115, 60);
+    padding:30px;
+    display:flex;         
+}
+
+.museokortti p {    
+    width:100%;
+    font-size: 14px;
+    font-family:'Montserrat', serif;
+    color:white;
+    margin:auto;
+    text-align: center;
+}
+
+.museokortti img {
+    width:50px;
+    display: inherit;
+}
+
+   
+/* -----------44444444----------------------- */
+.eyes img {
+    width:calc(9vw + 40px);
+    position: absolute;
+}   
+
+.eyes h2 {
+    position: relative;
+    font-size:50px;
+    color:white;   
+    padding:6.8%;
+    background-color:#363636;
+    letter-spacing: 1.9px;
+    text-align:center;
+}
+
+.eyes-left {left:3%; margin-top:-5.0%}
+
+.eyes-right {right:3%; margin-top:-5.0%}
+
+/* -------------------555555555----------------- */
+
+
+.slidingitem {
+    float:left;
+    width:50%;
+    overflow: hidden;
+    
+}
+
+.slidingdiv {   
+    width:300%; 
+    display:flex;
+    flex-wrap:nowrap;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;  
+    animation: slide 12s infinite;
+
+}
+
+@keyframes slide {
+    20% {margin-left: 0px;}
+    40% {margin-left: -100%;}
+    60% {margin-left: -100%;}
+    80% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+   
+}
+
+.slidingdiv div {
+    width:100%;
+    height:100%;
+}
+
+.slidingitem div img {
+   width: 100%; 
+   height:auto;
+
+}
+.slidesection {
+    overflow:hidden;
+    margin-bottom:2%;
+}
+
+.slidesection img {margin-bottom: 15px;}
+
+.observatorio {
+    float:left;
+    width:25%;
+    display:block;  
+    overflow: hidden;
+}
+
+.slidingtext h2, .observatorio h2 {
+    font-size:30px;
+    font-weight: 500;
+    padding:5px 0;
+    text-align:initial;
+    padding-left:25px;
+}
+
+.slidingtext p, .slidingtext a, .observatorio p, .observatorio time {
+    text-align:initial;    
+    font-family:'Open Sans Condensed', sans-serif;
+    padding:5px 25px 15px;   
+    font-weight: 350;
+    letter-spacing: 1.2;    
+}
+
+.slidingtext a, .observatorio time {color:#32804B;font-weight: 700;}
+
+
+
+/* ------------77777777777---------------- */
+
+.bluediv {
+    width:100%;
+    background-color:#7ab7bc;
+    text-align:center;
+    padding:3%;
+    position: relative; 
+}
+
+.bluediv div h2 {
+    margin-bottom: 5px;
+    font-size: 1.8em;  
+}
+
+.bluediv .circleorangeinfo {
+    top:20%;
+    left:85%;    
+}
+
+
+.bluediv time {color:white; font-size:1.4em;}
+
+.bluediv div {
+    width:50%;
+    margin:0 auto;
+    opacity: 0.9;
+}
+
+/* -------------88888888888-------------- */
+
+.event {
+    display:flex;
+}
+.event > * {
+    width:50%;
+    height: 100%;
+}
+
+.event h2 {
+    font-size:1.8em; 
+    padding-bottom:10px; 
+    line-height: 1.2;
+}
+
+.event div {
+    padding:3%;
+}
+
+/* ----------99999999----------- */
+
+.tuu-tikki {margin:30px 0;}     
+
+.tuu-tikki article {
+    font-family: 'Satisfy', cursive;
+    text-align:center;
+    font-size:2.5em;
+    opacity: 0.8;
+    font-weight: 300px;
+}
+.tuu-tikki > h2  {
+    text-align:center;
+    margin:15px 0;
+    font-size: 1.8em;
+    color:#32804B;
+    letter-spacing: 1.7px;
+}
+
+/* ----------10 10 10  10 10 -------- */
+
+.logo {
+    position: relative;
+    margin:50px auto;
+    display:flex;
+    justify-content: space-around;
+}
+
+.logo img {width:90%;}
+
+/*  ------------FOOTER---------- */
+
+footer {
+    background-image: url(Pictures/bg-footer-background.jpg);
+    background-size: cover;
+    height: 100%;
+    width:100%;
+    font-family: 'Montserrat', serif;
+    font-size:14px;    
+}
+
+.footercontainer {
+    display:flex;
+    justify-content: space-between;
+    padding:90px 15px;
+    margin:0 auto;  
+    color:white;
+    
+}
+
+.footercontainer a {color:white;}
+
+.foot {
+    width:calc(100% / 6)
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer h3 {
+    text-transform: uppercase;
+    padding-bottom:15px;   
+    font-weight: 400; 
+}
+
+.foot1 li {margin-bottom: 8%;}
+
+.foot1 p {
+    border:2px solid white;
+    text-align:center;
+    margin:20px 0;
+    padding:5px 25px;
+}
+/* ---------------------- */
+
+.iconfooter {
+    margin:30px auto 0 auto;
+    display:flex;
+    justify-content: space-between; 
+    vertical-align: middle;
+}
+
+.icon ul li{
+    display:inline-block;
+}
+.icon{margin-right: 20%;}
+
+.icon img{
+    width:80%;
+    padding:5%;
+}
+
+.tampere > * {
+    float:left;
+    text-align:right;
+    padding-right: 3px;
+    font-family: 'Montserrat', serif;
+    font-size:14px;
+}
+
+
+
+@media (max-width:1200px) {
+
+    .container  {
+        width:970px;
+    }
+
+    .language-checkbox, .navcontainer {
+        display:none;
+    }
+
+    .hamburgermenu {display:block;}
+
+
+}
+
+@media (max-width:1080px) {
+    body{
+        background-image: none;
+    }
+}
+
+@media (max-width:991px) {
+
+    .container {width:750px;}
+    div.mainentrance h2 {font-size:30px;}
+
+    div.mainentrance h1 {line-height: 1;}
+
+    p.circleorangeinfo {
+        top:40%;
+        left:100%;
+    }
+   
+    div.maailman {
+        width:470px;
+        position: relative;
+        margin:10px auto;
+    }
+
+    div.observatorio {width:50%;}
+
+    div.observatorio2 {clear:left;}
+
+    div.eyes img {width:16vw;}
+
+    .bluediv .circleorangeinfo {
+        position:relative;
+        right:0;
+        left:0;
+        margin:10px auto;
+
+    }
+    .bluediv div {
+        width:100%;
+    }
+
+    div.event {display:initial;}
+    div.event div, div.event img {width:100%;}
+
+    .logo {
+        display:block;
+        text-align: center;    
+    }
+    
+    .logo img {width:380px;}
+
+    .footercontainer {padding:20px 15px;}
+
+    .foot {
+        width:calc(100% / 3);
+        padding-top:20px;
+    }
+
+    .footercontainer {flex-wrap: wrap;}
+
+    .icon {margin-right: 10px;} 
+
+    .icon img {width:70%;}
+
+    .museokortti {display:table; padding-top:20px;}
+
+
+    .museokortti img {margin:5px auto 0;}
+
+}
+
+
+@media (max-width: 767px) {
+
+    .container {width:100%;}
+
+    div.maailman {max-width:100%; }
+
+    div.mainentrance h1 {font-size: 36px; }
+
+    .mainentrance {padding:50px auto;}
+
+    p.circleorangeinfo {
+        top:5%;
+        
+        
+    }
+
+    div.observatorio {width:100%;}
+
+    .slidingitem {width:100%;}
+
+    .tuu-tikki article {font-size: 20px;}
+
+    .foot {width:calc(100% / 2);}
+
+    .foot1 p {display:inline-block;}
+
+    .footercontainer {padding:30px;}
+
+    .iconfooter {display:block;}
+
+    .iconfooter > div {margin-bottom:30px;}
+
+    .eyes h2 {font-size:36px;}
+}
+
+@media (max-width:650px) {
+
+    div.maailman {width: 100%;}
+
+    p.circleorangeinfo {
+        position:static;        
+        margin:auto;
+        text-align:center;
+}
+}
+
+@media (max-width:460px) {
+    img.eyes-left, img.eyes-right {display:none;}
+
+    .foot {width:100%;}
+}
