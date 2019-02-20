@@ -21,7 +21,7 @@ body{
     position: relative;
     margin:0;
     transition: margin-right .5s;
-    background-image:url("Pictures/Capture.jpg");
+    background-image:url('Pictures/Capture.jpg');
     background-repeat: no-repeat;
     background-position: 100% 0;
     background-size:85px;
